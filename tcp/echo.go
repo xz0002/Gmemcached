@@ -5,11 +5,11 @@ package tcp
  */
 
 import (
+	"Gmemcached/lib/logger"
+	"Gmemcached/lib/sync/atomic"
+	"Gmemcached/lib/sync/wait"
 	"bufio"
 	"context"
-	"go-redis/lib/logger"
-	"go-redis/lib/sync/atomic"
-	"go-redis/lib/sync/wait"
 	"io"
 	"net"
 	"sync"

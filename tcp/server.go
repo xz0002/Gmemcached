@@ -5,10 +5,10 @@ package tcp
  */
 
 import (
+	"Gmemcached/interface/tcp"
+	"Gmemcached/lib/logger"
 	"context"
 	"fmt"
-	"go-redis/interface/tcp"
-	"go-redis/lib/logger"
 	"net"
 	"os"
 	"os/signal"

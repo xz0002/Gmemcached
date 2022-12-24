@@ -1,15 +1,15 @@
 package main
 
 import (
+	"Gmemcached/config"
+	"Gmemcached/lib/logger"
+	"Gmemcached/tcp"
+	EchoHandler "Gmemcached/tcp"
 	"fmt"
-	"go-redis/config"
-	"go-redis/lib/logger"
-	"go-redis/tcp"
-	EchoHandler "go-redis/tcp"
 	"os"
 )
 
-const configFile string = "redis.conf"
+const configFile string = "Gmemcached.conf"
 
 var defaultProperties = &config.ServerProperties{
 	Bind: "0.0.0.0",
@@ -24,7 +24,7 @@ func fileExists(filename string) bool {
 func main() {
 	logger.Setup(&logger.Settings{
 		Path:       "logs",
-		Name:       "godis",
+		Name:       "Gmemcached",
 		Ext:        "log",
 		TimeFormat: "2006-01-02",
 	})
